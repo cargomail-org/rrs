@@ -1,0 +1,21 @@
+participant "Sender's Client" as s_client
+participant "Sender's RS" as s_rs
+
+materialdesignicons f590 Internet
+
+participant "Recipient's RRA" as r_rra
+participant "Recipient's STS" as r_sts
+participant "Recipient's Client" as r_client
+
+bottomparticipants
+
+r_client-->r_rra:1.
+r_rra->r_rra:2.
+r_rra->r_sts:3.
+r_rra<-r_sts:4.
+r_rra->s_rs:5. HTTPS/mTLS
+s_rs->s_rs:6.
+
+s_rs->r_rra:7.
+r_rra<--r_client:8.
+r_rra-->r_client:9.
