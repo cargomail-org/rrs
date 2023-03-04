@@ -1,8 +1,8 @@
-# IPAP Resource Retrieval System
+# GRIP Resource Retrieval System
 
 ## Abstract
 
-An pull-based Resource Retrieval System (RRS) implements the HTTPS/mTLS protocol and the OAuth 2.0-based architecture to overcome an SMTP MTA deficiency.
+An pull-based Resource Retrieval System (RRS) implements the [Global Reference Identity Protocol (GRIP)](https://github.com/cargomail-org/grip) to overcome an SMTP MTA deficiency.
 
 ## Description
 
@@ -10,7 +10,7 @@ The RRS transfers data between untrusted hosts across the internet using the HTT
 
 ## Internet Mail 2000 Legacy
 
-This effort enhances the [Internet Mail 2000](https://en.wikipedia.org/wiki/Internet_Mail_2000) concept proposed by Daniel J. Bernstein by using a specific [OAuth 2.0-based mechanism](https://github.com/cargomail-org/identity-propagation-and-assertions-protocol) designed on the principle that the final storage of linked binary data (blobs) referenced in the message should be the responsibility of the recipient and not of the sender as it is with the SMTP-based mail architecture.
+This effort enhances the [Internet Mail 2000](https://en.wikipedia.org/wiki/Internet_Mail_2000) concept proposed by Daniel J. Bernstein by using a specific [OAuth 2.0-based mechanism](https://github.com/cargomail-org/grip) designed on the principle that the final storage of linked binary data (blobs) referenced in the message should be the responsibility of the recipient and not of the sender as it is with the SMTP-based mail architecture.
 
 ## Model
 
@@ -26,7 +26,7 @@ RRS ensures the automatic transfer of linked files from sender to recipient. Con
 
 #### An RRA-to-RS flow
 
-Pull mode using the [2-legged OAuth 2.0 Identity Propagation and Assertions Protocol](https://github.com/cargomail-org/identity-propagation-and-assertions-protocol#2-legged-oauth-20-identity-propagation) flow. The RRA transfers data between untrusted hosts via the HTTPS/mTLS connection.
+Pull mode using the [2-legged Identity Propagation](https://github.com/cargomail-org/grip#2-legged-oauth-20-identity-propagation) flow. The RRA transfers data between untrusted hosts via the HTTPS/mTLS connection.
 
 ![Diagram](./images/RRA-to-RS_pull.png)
 
